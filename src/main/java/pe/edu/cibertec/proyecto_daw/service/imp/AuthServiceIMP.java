@@ -71,7 +71,7 @@ public class AuthServiceIMP implements AuthService {
         String[] datosAlumno = null;
         ArrayList<String> grupo = new ArrayList<String>();
         Resource resource = resourceLoader.getResource("classpath:integrantes.txt");
-        try(BufferedReader br = new BufferedReader(new FileReader(resource.getFile()))){
+            try(BufferedReader br = new BufferedReader(new InputStreamReader(resource.getInputStream()))){
             String line;
 
             while ((line = br.readLine()) != null) {
